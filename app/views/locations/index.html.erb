@@ -1,0 +1,13 @@
+<div data-role="header">
+	<h1>Locations</h1>
+</div>
+<div data-role="content">
+	<ul data-role="listview" data-theme="g">
+		<% locations.each do |loc| %>
+		<li><%= link_to loc.name, loc %></li>
+		<% end %>
+	</ul>
+</div>
+<div data-role="footer">
+	<p>PantherEats &copy; 2012</p>
+</div>

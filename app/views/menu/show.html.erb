@@ -1,0 +1,25 @@
+<div data-role="header">
+	<h1><%= menu.vendor.name %></h1>
+</div>
+<div data-role="content">
+	<div data-role="collapsible" data-theme="b" data-content-theme="d">
+		<h3><%= menu.vendor.name %></h3>
+		<p><%= menu.vendor.name %> &nbsp; menu information!</p>
+	</div>
+	<h2>Menu</h2>
+	<ul data-role="listview" data-theme="g">
+		<% specials=menu.specials %>
+		<% standards=menu.standards %>
+		<li data-role="divider"><h1>Specials</h1></li>
+		<% standards.each do |std| %>
+		<li><%= link_to std.name, std %></li>
+		<% end %>
+		<li data-role="divider"><h1>Specials</h1></li>
+		<% specials.each do |spc| %>
+		<li><%= link_to spc.name, spc %></li>
+		<% end %>
+	</ul>
+</div>
+<div data-role="footer">
+	<p>PantherEats &copy; 2012</p>
+</div>

@@ -1,0 +1,17 @@
+<div data-role="header">
+	<h1><%= loc.name %></h1>
+</div>
+<div data-role="content">
+	<div data-role="collapsible" data-theme="b" data-content-theme="d">
+		<h3><%= loc.name %></h3>
+		<p><%= loc.name %> &nbsp; information!</p>
+	</div>
+	<ul data-role="listview" data-theme="g">
+		<% vendors.each do |vend|  %>
+		<li><%= link_to vend.name, vend %></li>
+		<% end %>
+	</ul>
+</div>
+<div data-role="footer">
+	<p>PantherEats &copy; 2012</p>
+</div>
